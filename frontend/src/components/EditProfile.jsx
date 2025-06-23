@@ -3,7 +3,6 @@ import profilePhoto from '../assets/profile-photo.webp';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/Avatar'
 import { useDispatch, useSelector } from 'react-redux';
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from './ui/Select';
-import { Textarea } from './ui/TextArea'
 import axios from 'axios';
 import Loader from './ui/Loader';
 import { useNavigate } from 'react-router-dom';
