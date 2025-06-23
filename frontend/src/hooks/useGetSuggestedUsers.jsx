@@ -10,7 +10,7 @@ const useGetSuggestedUsers = () => {
     const fetchSuggestedUsers = async () => {
       console.log("Fetching suggested users..."); // ✅ check if this prints
       try {
-        const res = await axios.get("http://localhost:8000/api/v1/user/suggested", {
+        const res = await axios.get("https://social-media-ttfc.onrender.com/api/v1/user/suggested", {
           withCredentials: true,
         });
         console.log("API Response:", res.data); // ✅ Add this

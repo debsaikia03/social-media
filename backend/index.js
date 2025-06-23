@@ -33,7 +33,7 @@ app.use(cookieParser()); // Middleware to parse cookies
 app.use(urlencoded({ extended: true })); // Middleware to parse URL-encoded data with the querystring library
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // Allowing requests from this origin
+    origin: process.env.URL, // Allowing requests from this origin
     credentials: true, // Allowing credentials (cookies, authorization headers, etc.) to be sent in requests
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allowing these HTTP methods
 };

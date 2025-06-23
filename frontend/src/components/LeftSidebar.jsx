@@ -51,7 +51,7 @@ export default function LeftSidebar() {
 
   const logoutHandler = async () => {
     try {
-      const res = await axios.get('http://localhost:8000/api/v1/user/logout', {
+      const res = await axios.get('https://social-media-ttfc.onrender.com/api/v1/user/logout', {
         withCredentials: true //to send cookies with the request
       });
       if (res.data.success) {

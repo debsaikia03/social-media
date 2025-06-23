@@ -67,7 +67,7 @@ export default function Post({ post }) {
     const likeOrDislikeHandler = async () => {
         try {
             const action = liked ? 'dislike' : 'like'; // Determine action based on current like state
-            const res = await axios.get(`http://localhost:8000/api/v1/post/${post._id}/${action}`, {
+            const res = await axios.get(`https://social-media-ttfc.onrender.com/api/v1/post/${post._id}/${action}`, {
                 withCredentials: true,
             });
             if (res.data.success) {
@@ -92,7 +92,7 @@ export default function Post({ post }) {
 
     const commentHandler = async (e) => {
         try {
-            const res = await axios.post(`http://localhost:8000/api/v1/post/${post?._id}/comment`, { text }, {
+            const res = await axios.post(`https://social-media-ttfc.onrender.com/api/v1/post/${post?._id}/comment`, { text }, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -123,7 +123,7 @@ export default function Post({ post }) {
     const deletePostHandler = async () => {
 
         try {
-            const res = await axios.delete(`http://localhost:8000/api/v1/post/delete/${post?._id}`, {
+            const res = await axios.delete(`https://social-media-ttfc.onrender.com/api/v1/post/delete/${post?._id}`, {
                 withCredentials: true,
             });
             if (res.data.success) {
@@ -139,7 +139,7 @@ export default function Post({ post }) {
 
     const bookmarkHandler = async () => {
         try {
-            const res = await axios.get(`http://localhost:8000/api/v1/post/${post?._id}/bookmark`, {
+            const res = await axios.get(`https://social-media-ttfc.onrender.com/api/v1/post/${post?._id}/bookmark`, {
                 withCredentials: true,
             });
             if (res.data.success) {
@@ -160,7 +160,7 @@ export default function Post({ post }) {
         if (!post.author || !user) return;
         try {
             const res = await axios.get(
-                `http://localhost:8000/api/v1/user/followorunfollow/${post.author._id}`,
+                `https://social-media-ttfc.onrender.com/api/v1/user/followorunfollow/${post.author._id}`,
                 { withCredentials: true }
             );
             if (res.data.success) {

@@ -62,7 +62,7 @@ function App() {
 
   useEffect(() => {
     if (user) {
-      const socketio = io('http://localhost:8000', {
+      const socketio = io('https://social-media-ttfc.onrender.com', {
         query: {
           userId: user._id //send user id to the server
         },

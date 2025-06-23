@@ -11,7 +11,7 @@ const useGetUserProfile = (userId) => {
     const fetchUserProfile = async () => {
       console.log("Fetching suggested users..."); // ✅ check if this prints
       try {
-        const res = await axios.get(`http://localhost:8000/api/v1/user/${userId}/profile`, {
+        const res = await axios.get(`https://social-media-ttfc.onrender.com/api/v1/user/${userId}/profile`, {
           withCredentials: true,
         });
         console.log("API Response:", res.data); // ✅ Add this

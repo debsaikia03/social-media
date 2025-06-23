@@ -34,7 +34,7 @@ export default function Login() {
 
       setLoading(true);
 
-      const res = await axios.post('http://localhost:8000/api/v1/user/login', input, {
+      const res = await axios.post('https://social-media-ttfc.onrender.com/api/v1/user/login', input, {
 
         headers: {
           'Content-Type': 'application/json' //specifies that the request body is in JSON format

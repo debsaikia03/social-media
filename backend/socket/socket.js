@@ -1,6 +1,9 @@
 import { Server } from 'socket.io';
 import express from 'express';
 import http from 'http';
+import dotenv from 'dotenv'; // Importing dotenv for accessing environment variables
+
+dotenv.config({}); // Invoking the config method of dotenv to load environment variables from a .env file
 
 const app = express();
 
@@ -8,7 +11,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5173', // Update with your frontend URL
+        origin: process.env.URL, // Update with your frontend URL
         methods: ['GET', 'POST'],
     },
 });

@@ -14,7 +14,7 @@ const useGetAllMessages = () => {
 
         const fetchAllMessages = async () => {
             try {
-                const res = await axios.get(`http://localhost:8000/api/v1/message/all/${selectedUser?._id}`, {
+                const res = await axios.get(`https://social-media-ttfc.onrender.com/api/v1/message/all/${selectedUser?._id}`, {
                     withCredentials: true
                 });
                 if (res.data.success) {
