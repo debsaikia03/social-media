@@ -2,7 +2,7 @@ import React, { useRef, useState, useCallback } from 'react'
 import profilePhoto from '../assets/profile-photo.webp';
 import { Dialog, DialogContent, DialogHeader } from './ui/Dialog'
 import { Avatar, AvatarFallback, AvatarImage } from './ui/Avatar'
-import { Textarea } from './ui/TextArea'
+import { Textarea } from './ui/Textarea'
 import { Button } from './ui/Button'
 import Loader from './ui/Loader'
 import { readFileAsDataURL } from '../lib/utils';
