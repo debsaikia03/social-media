@@ -11,7 +11,7 @@ import { setAuthUser } from '../redux/authSlice.js'
 //useSelector is a hook that allows you to extract data from the Redux store state, using a selector function. It takes a function as an argument that receives the entire Redux store state and returns the part of the state you want to access. In this case, it is used to get the user information from the auth slice of the Redux store.
 import CreatePost from './CreatePost'
 import { setPosts, setSelectedPost } from '../redux/postSlice.js';
-import { Popover, PopoverTrigger, PopoverContent } from './ui/popover.jsx';
+import { Popover, PopoverTrigger, PopoverContent } from './ui/Popover.jsx';
 
 //fixed top-0 z-10 left-0 px-4 border-r border-gray-300 w-[16%] h-screen:
 /*
