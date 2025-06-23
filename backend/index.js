@@ -18,7 +18,7 @@ const PORT = process.env.PORT || 3000; // Defining the port number on which the 
 const __dirname = path.resolve(); // Getting the absolute path of the current directory
 console.log(__dirname)
 
-app.get("/", (_, res) => {// Defining a route to send a response when the server is running
+app.get("/server", (_, res) => {// Defining a route to send a response when the server is running
 
     return res.status(200).json({ 
 
@@ -49,7 +49,7 @@ app.use('/api/v1/user', userRoute);// Defining the base URL for the user routes
 app.use('/api/v1/post', postRoute); 
 app.use('/api/v1/message', messageRoute);
 
-app.use(express.static(path.join(__dirname, "/frontend/dist"))); // Serving static files from the frontend/dist directory
+app.use(express.static(path.join(__dirname, "./frontend/dist"))); // Serving static files from the frontend/dist directory
 app.get('*',(req, res) => { // Catch-all route to serve the index.html file for any other routes
   res.sendFile(path.join(__dirname, "frontend", "dist", "index.html")); // Sending the index.html file as a response
 });
